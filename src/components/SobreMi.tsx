@@ -43,22 +43,22 @@ export default function SobreMi() {
                 Mi stack: <span className="text-blue-400">React</span>, <span className="text-green-400">Node.js</span>, <span className="text-purple-400">PostgreSQL</span>.
               </p>
               
-              <p>
-                Lo que me diferencia? <span className="text-white">Atencion personalizada</span>. No soy una agencia, 
-                soy yo trabajando en tu proyecto.直接amente.
-              </p>
-              
-              <p>
-                Si necesitas algo web y tenes un presupuesto acotado, podemoschar. 
-                Entrego en tiempo y con buena comunicacion.
-              </p>
+               <p>
+                 Lo que me diferencia? <span className="text-white">Atención personalizada</span>. No soy una agencia, 
+                 soy yo trabajando en tu proyecto directamente.
+               </p>
+               
+               <p>
+                 Si necesitas algo web y tenés un presupuesto acotado, podemos charlar. 
+                 Entrego en tiempo y con buena comunicación.
+               </p>
             </div>
 
             {/* Stats */}
             <div className="flex gap-8 mt-10">
               <div className="text-center">
                 <div className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">2+</div>
-                <div className="text-sm text-gray-500 mt-1">anos aprendendo</div>
+                 <div className="text-sm text-gray-500 mt-1">años aprendiendo</div>
               </div>
               <div className="w-px h-12 bg-gray-800" />
               <div className="text-center">

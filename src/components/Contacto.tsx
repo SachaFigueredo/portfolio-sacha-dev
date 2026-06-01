@@ -79,7 +79,7 @@ export default function Contacto({ email, github, linkedin, instagram, tiktok, w
             Hablemos
           </h2>
           <p className="text-gray-500 mt-4">
-            Respondo rapido. Sin compromiso.
+             Respondo rápido. Sin compromiso.
           </p>
         </motion.div>
 

@@ -46,12 +46,12 @@ export default function Tecnologia({ technologies }: TecnologiaProps) {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <span className="text-blue-400 text-sm font-semibold uppercase tracking-widest">
-            Tecnologias
-          </span>
-          <h2 className="text-4xl lg:text-5xl font-bold mt-3">
-            Mi stack tecnico
-          </h2>
+            <span className="text-blue-400 text-sm font-semibold uppercase tracking-widest">
+              Tecnologías
+            </span>
+            <h2 className="text-4xl lg:text-5xl font-bold mt-3">
+              Mi stack técnico
+            </h2>
         </motion.div>
 
         {/* Skills grid */}

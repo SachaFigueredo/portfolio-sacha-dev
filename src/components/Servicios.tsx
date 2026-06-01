@@ -51,7 +51,7 @@ export default function Servicios({ services }: ServiciosProps) {
             Lo que puedo hacer por ti
           </h2>
           <p className="text-gray-500 mt-4 max-w-xl mx-auto">
-            Proyectos con atencion directa mia. Sin intermediarios.
+             Proyectos con atención directa mía. Sin intermediarios.
           </p>
         </motion.div>
 
@@ -113,7 +113,7 @@ export default function Servicios({ services }: ServiciosProps) {
           className="text-center mt-12"
         >
           <p className="text-gray-500">
-            Tenes otro proyecto en mente?{" "}
+             Tenés otro proyecto en mente?{" "}
             <button 
               onClick={() => {
                 const contacto = document.getElementById("contacto");

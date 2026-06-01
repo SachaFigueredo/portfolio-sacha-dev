@@ -46,7 +46,7 @@ export default function Proyectos({ projects }: ProyectosProps) {
             Mi trabajo
           </h2>
           <p className="text-gray-500 mt-4 max-w-xl mx-auto">
-            Proyectos que hice solo. No son de una empresa, son mios.
+            Proyectos que hice solo. No son de una empresa, son míos.
           </p>
         </motion.div>
 
