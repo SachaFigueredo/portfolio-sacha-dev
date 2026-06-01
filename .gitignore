@@ -47,3 +47,6 @@ logs
 
 # Testing
 coverage/
+
+# SDD
+.atl/

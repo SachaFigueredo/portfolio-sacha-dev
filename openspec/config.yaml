@@ -1,0 +1,29 @@
+context: >
+  Portfolio SPA with scroll navigation. Dark theme, single-page layout with fixed
+  nav. Targets freelance client conversion. Built with Next.js 16 App Router,
+  React 19, TypeScript, Tailwind CSS v4, Framer Motion 12.
+
+strict_tdd: false
+
+testing:
+  runner: none
+  layers:
+    unit: false
+    integration: false
+    e2e: false
+  coverage: false
+  quality:
+    linter: eslint
+    type_checker: typescript (tsc --noEmit)
+    formatter: none
+
+persistence: hybrid
+
+phases:
+  - propose
+  - spec
+  - design
+  - tasks
+  - apply
+  - verify
+  - archive

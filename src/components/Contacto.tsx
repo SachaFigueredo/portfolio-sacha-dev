@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, MessageCircle, Send, Check } from "lucide-react";
+import { Mail, MessageCircle, Send, Check, AlertCircle } from "lucide-react";
+import { sendContactEmail } from "@/app/actions/contact";
 
 /*
   ========================================
@@ -34,19 +35,26 @@ export default function Contacto({ email, github, linkedin, instagram, tiktok, w
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.message) return;
     
     setIsSubmitting(true);
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    setSubmitError(null);
     
-    setSubmitSuccess(true);
+    const result = await sendContactEmail(formData);
+    
+    if (result.success) {
+      setSubmitSuccess(true);
+      setFormData({ name: "", email: "", message: "" });
+      setTimeout(() => setSubmitSuccess(false), 4000);
+    } else {
+      setSubmitError(result.error || "Error al enviar el mensaje.");
+    }
+    
     setIsSubmitting(false);
-    setFormData({ name: "", email: "", message: "" });
-    
-    setTimeout(() => setSubmitSuccess(false), 3000);
   };
 
   return (
@@ -85,9 +93,9 @@ export default function Contacto({ email, github, linkedin, instagram, tiktok, w
             <div className="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center">
               <Mail size={16} className="text-blue-400" />
             </div>
-            <div className="text-xs">
+            <div className="text-xs min-w-0">
               <div className="text-gray-500">Email</div>
-              <div className="text-white group-hover:text-blue-400 transition-colors truncate">Email</div>
+              <div className="text-white group-hover:text-blue-400 transition-colors truncate">{email}</div>
             </div>
           </a>
 
@@ -219,6 +227,13 @@ export default function Contacto({ email, github, linkedin, instagram, tiktok, w
             {submitSuccess && (
               <p className="text-center text-green-400 text-sm">
                 Gracias! Te respondo lo antes posible.
+              </p>
+            )}
+
+            {submitError && (
+              <p className="text-center text-red-400 text-sm flex items-center justify-center gap-2">
+                <AlertCircle size={14} />
+                {submitError}
               </p>
             )}
           </form>
